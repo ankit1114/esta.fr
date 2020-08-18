@@ -1,0 +1,30 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  {% block content %}
+    {% if content.field_heading['#items'].value|trim is not empty %}
+      <div class="estDiv">
+        <div class="container">
+          <h2> {{ content.field_heading }} </h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="estDiv-lft"> {{ content.field_image }} </div>
+            </div>
+            <div class="col-md-8">
+              <div class="estDiv-lft">
+                {{ content.field_body_text }}
+              </div>
+            </div>
+          </div>
+          <div class="full"> <a href="http://localhost/esta/web/services" class="estbtn"> Cliquez pour des services supplémentaires </a> </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endblock %}
+{% endblock paragraph %}

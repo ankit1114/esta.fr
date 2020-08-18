@@ -1,0 +1,16 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  {% block content %}
+    <button class="collapsible"> {{ content.field_question }} </button>
+    <div class="content">
+      {{ content.field_answer }}
+    </div>
+  {% endblock %}
+{% endblock paragraph %}

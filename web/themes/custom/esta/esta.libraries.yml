@@ -1,0 +1,19 @@
+global-styling:
+  css:
+    theme:
+      css/bootstrap.min.css: { }
+      css/font-awesome.css: { }
+      css/style.css: { }
+      css/responsive.css: { }
+      css/owl.carousel.css: { }
+      css/owl.theme.css: { }
+
+  js:
+    js/jquery-1.11.1.min.js: { }
+    js/bootstrap.min.js: { }
+    js/owl-carousel.js: { }
+    js/newsandmedia.js: { }
+    js/jquery.flexnav.js: { }
+    js/flexnav.js: {}
+    js/collapsible.js: { }
+

@@ -1,0 +1,26 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  {% block content %}
+    {% if content.field_heading['#items'].value|trim is not empty %}
+      <div class="body-part">
+        <div class="container">
+          <h1> {{ content.field_heading }} </h1>
+          <div class="body-part-lft">
+            <div class="ques"> {{ content.field_ques_heading }} </div>
+            {{ Faq }}
+          </div>
+          <div class="body-part-rht">
+            {{ content.field_body_text }}
+            {{ drupal_entity('webform', 'contact_us') }}
+        </div>
+      </div>
+    {% endif %}
+  {% endblock %}
+{% endblock paragraph %}

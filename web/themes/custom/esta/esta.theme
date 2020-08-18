@@ -1,0 +1,150 @@
+<?php
+
+use Drupal\Core\Link;
+use Drupal\file\Entity\File;
+use Drupal\core\Url;
+
+/*
+ * Implements esta_preprocess_page().
+ *
+ */
+
+function esta_preprocess_page(&$variables) {
+
+  $site_config = \Drupal::config('system.site');
+
+  $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+
+  // code for main menu
+  $menu_tree = \Drupal::menuTree();
+  $parameters = $menu_tree->getCurrentRouteMenuTreeParameters('main');
+  $menuTree = $menu_tree->load('main', $parameters);
+
+  if (!empty($menuTree)) {
+    $count = 1;
+    foreach ($menuTree as $treeLink ) {
+      $route = $treeLink->link->getRouteName();
+      $routePerameters = $treeLink->link->getRouteParameters();
+      $title = $treeLink->link->getTitle();
+      $options = $treeLink->link->getOptions();
+      $isActive = $treeLink->inActiveTrail;
+      if ($isActive) {
+        $options['attributes']['class'][] = 'active';
+      }
+      if ($treeLink->link->isEnabled()  && $route != "") {
+        $links[$count]['link'] = Link::createFromRoute($title, $route, $routePerameters, $options)->toString();
+        $mobile_links[$count]['link'] = Link::createFromRoute($title, $route, $routePerameters, $options)->toString();
+        if ($treeLink->hasChildren) {
+          $count2 = 1;
+          $options['attributes']['class'] = [];
+          if ($route != '<nolink>') {
+            $mobile_links[$count]['subMenu'][0]['link'] = Link::createFromRoute($title, $route, $routePerameters, $options)->toString();
+          }
+          foreach ($treeLink->subtree as $subLinkTree) {
+            $route = $subLinkTree->link->getRouteName();
+            $routePerameters = $subLinkTree->link->getRouteParameters();
+            $title = $subLinkTree->link->getTitle();
+            $subMenuOptions = $subLinkTree->link->getOptions();
+            if ($subLinkTree->link->isEnabled() && $route != "") {
+              $links[$count]['subMenu'][$count2]['link'] = Link::createFromRoute($title, $route, $routePerameters, $subMenuOptions)->toString();
+              $mobile_links[$count]['subMenu'][$count2]['link'] = Link::createFromRoute($title, $route, $routePerameters, $subMenuOptions)->toString();
+              //$links[$count]['subMenu'][$count2]['title'] = $title;
+              $count2++;
+            }
+            else {
+              $linkUrlObject = $subLinkTree->link->getUrlObject();
+              if ($linkUrlObject->isExternal()) {
+                $linkUrlObject->setOption('attributes', ['target' => '_blank']);
+              }
+              $links[$count]['subMenu'][$count2]['link'] = Link::fromTextAndUrl($title, $linkUrlObject)->toString();
+              $mobile_links[$count]['subMenu'][$count2]['link'] = Link::fromTextAndUrl($title, $linkUrlObject)->toString();
+            }
+          }
+        }
+        $count++;
+      }
+    }
+  }
+
+  $variables['menu'] = [
+    '#theme' => 'main_nav_links',
+    '#links' => (isset($links)) ? $links : NULL,
+  ];
+  $variables['mobilemenu'] = [
+    '#theme' => 'mobile_nav_links',
+    '#links' => (isset($mobile_links)) ? $mobile_links : NULL,
+  ];
+
+
+  $variables['twitter_link'] = theme_get_setting('twitter_link');
+  $variables['youtube_link'] = theme_get_setting('youtube_link');
+  $variables['instagram_link'] = theme_get_setting('instagram_link');
+  $variables['esta_contact_number'] = theme_get_setting('esta_contact_number');
+  $variables['esta_email'] = theme_get_setting('esta_email');
+  $variables['esta_header_text'] = theme_get_setting('esta_header_text');
+
+  $fid = theme_get_setting('esta_flag_image');
+  $file = File::load($fid[0]);
+  $fileUri = $file->getFileUri();
+  $fileUrl =  file_create_url($fileUri);
+  $variables['flag_image'] = $fileUrl;
+
+
+  $fid = theme_get_setting('esta_twitter_icon');
+  $file = File::load($fid[0]);
+  $fileUri = $file->getFileUri();
+  $fileUrl =  file_create_url($fileUri);
+  $variables['twitter_icon'] = $fileUrl;
+
+
+  $fid = theme_get_setting('esta_instagram_icon');
+  $file = File::load($fid[0]);
+  $fileUri = $file->getFileUri();
+  $fileUrl =  file_create_url($fileUri);
+  $variables['instagram_icon'] = $fileUrl;
+
+
+  $fid = theme_get_setting('esta_youtube_icon');
+  $file = File::load($fid[0]);
+  $fileUri = $file->getFileUri();
+  $fileUrl =  file_create_url($fileUri);
+  $variables['youtube_icon'] = $fileUrl;
+
+}
+
+function esta_preprocess_paragraph(&$variables) {
+  $AuxQuestion = views_embed_view('aux_questions', 'block_1');
+  $variables['AuxQuestion'] = drupal_render($AuxQuestion);
+
+  $Faq = views_embed_view('faq', 'block_1');
+  $variables['Faq'] = drupal_render($Faq);
+
+  $LatestNews = views_embed_view('latestestanews', 'block');
+  $variables['LatestNews'] = drupal_render($LatestNews);
+
+  $PlaceofInterest = views_embed_view('placeofinterest', 'block');
+  $variables['PlaceofInterest'] = drupal_render($PlaceofInterest);
+
+  $Question = views_embed_view('information_qa', 'block_1');
+  $variables['Question'] = drupal_render($Question);
+
+  $Answer = views_embed_view('information_qa', 'block_2');
+  $variables['Answer'] = drupal_render($Answer);
+
+}
+
+
+function esta_theme($existing, $type, $theme, $path) {
+  return [
+    'main_nav_links' => [
+      'variables' => [
+        'links' => NULL,
+      ],
+    ],
+    'mobile_nav_links' => [
+      'variables' => [
+        'links' => NULL,
+      ],
+    ]
+  ];
+}

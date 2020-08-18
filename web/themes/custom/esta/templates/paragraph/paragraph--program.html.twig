@@ -1,0 +1,15 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  {% block content %}
+    <div class="pogrammeDiv">
+      {{ content.field_body_text }}
+    </div>
+  {% endblock %}
+{% endblock paragraph %}

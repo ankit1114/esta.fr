@@ -1,0 +1,769 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media screen and (min-width: 1601px) { 
+.banner { background-size:cover !important; }
+
+}
+
+@media screen and (max-width: 1440px) { 
+
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1366px) { 
+
+}
+
+@media screen and (max-width: 1280px) { 
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) { 
+.nav-ul { margin-left:15px;}
+.nav-ul li { margin-right:17px;}
+.nav-ul li a { font-size:12px;}
+.nav-ul li.dropdown .dropdown-menu .menuHldr ul li a { font-size:12px;}
+}
+
+@media screen and (min-width: 320px) and (max-width:991px) { 
+.navbar-toggle {
+    margin: 0px 15px 0 15px;
+    outline: none !important;
+    background: #ff0000;
+    padding: 12px 10px;
+}
+
+
+.navbar-toggle .icon-bar { width:30px; height:4px; background:#3e4058; }
+.logo { float:left; }
+.menu-button .touch-button { display:none !important; }
+
+
+.estDiv {
+    background-size: cover !important;
+}
+.banner {
+    text-align: center;
+}
+.estDiv-lft {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.estDiv ul li {
+    text-align: left;
+}
+.faisons .faisons-lft img {
+    margin-top: 30px;
+}
+.faisons .faisons-lft h2 {
+    margin-top: 0;
+}
+.newsCarousel .item .imgDiv {
+    height: auto;
+}
+.PressMedia a {
+    font-size: 18px;
+}
+.newsCarousel .item {
+    min-height: auto;
+}
+.newsCarousel .item .textDiv {
+    padding: 20px 0 0 0;
+}
+.footer-top-lft2 { margin-top:20px; }
+
+.upper-footer-lft { margin-top: 0; text-align:center; }
+
+.upper-footer-lft ul {
+    display: inline-block;
+}
+.upper-footer-mid h3 {
+    text-align: center;
+}
+
+.upper-footer-mid {
+    text-align: center;
+}
+
+.upper-footer-rht {
+    text-align: center;
+	margin-top:30px;
+}
+
+.top-header-lft span img {
+    margin-top: 12px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.top-header-lft span {
+    font-size: 13px;
+    margin-right: 0px;
+    line-height: 19px;
+}
+.Fairebtn {
+    padding: 6px 10px 9px 10px;
+    margin: 6px 0;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.top-header-rht span img {
+    margin-top: 12px;
+    height: 18px;
+}
+
+.body-part-lft {
+    width: 100%;
+}
+.body-part-rht {
+    width:100%;
+	margin-left: 0;
+	padding: 15px;
+}
+
+.auxDiv {
+    padding: 60px 0 20px 0;
+}
+.auxDiv-part {
+    padding: 0;
+}
+.butsDiv ul li {
+    width: 100%;
+}
+.mapDiv {
+    padding: 0 0;
+    background-size: 100%; 
+    margin-top: 0;
+}
+.mapDiv-rht {
+    padding-left: 0;
+    margin-top: 40px;
+}
+
+.mapDiv-lft h2 {
+    margin-top: 30px;
+}
+
+.QuellesDiv .nav.nav-pills {
+    display: inline-block;
+    margin: 0 auto;
+    float: none;
+}
+
+.mblpart { width:100%; float:left; text-align:center; }
+
+.mblpart .nav-pills>li {
+    margin-bottom: 20px;
+	text-align:left;
+}
+.guide-whitebox {
+    margin-top: 15px;
+}
+.QuellesDiv h2 {
+    margin-bottom: 50px;
+}
+
+.guide-whitebox-rht .full {
+    padding-left: 30px;
+}
+.guide-whitebox-lft {
+    margin-bottom: 20px;
+}
+
+.auxDiv .collapsible {
+    padding: 15px;
+}
+.auxDiv .content p {
+    padding: 5px 15px;
+}
+.auxDiv {
+    padding: 30px 0 20px 0;
+}
+.body-part h1 {
+    margin-bottom: 30px;
+}
+.covid h1 {
+    font-size: 26px;
+}
+.conditionDiv {
+    padding: 40px 0;
+}
+.conditionDiv h1 {
+    font-size: 26px;
+}
+
+.avionDiv {
+    margin: 0 0 0px 0;
+}
+.bordDiv-lft { margin-top:20px; }
+
+.bordDiv {
+    padding: 15px 0;
+}
+.glossaire-esta {
+    padding: 40px 0;
+}
+.glossaire-esta-lft {
+    height: auto;
+	margin-bottom: 17px;
+}
+.glossaire-esta-lft h3 {
+    font-size: 18px;
+    background: url(../images/tick2.png) no-repeat left 0;
+}
+.blogDiv-lft {
+    margin-bottom: 40px;
+}
+.blogDiv-rht {
+    height: 140px;
+}
+
+.blogDiv-lft .caption h2 {
+    margin-top: 37%;
+}
+.lieuxDiv-part {
+    padding-left: 0;
+    padding-top: 0;
+}
+.lieuxDiv-part span {
+    position: relative;
+}
+.lieuxDiv-part span img { width:100%; }
+.blogDiv {
+    padding: 40px 0 10px 0;
+}
+.blogDiv h1 {
+    margin-bottom: 25px;
+}
+.usaDiv-lft { width:100%; float:left; margin-bottom:20px; }
+.usaDiv {
+    padding: 40px 0 20px 0;
+}
+.usaDiv h2 {
+    margin-bottom: 30px;
+}
+.usaDiv-lft img { width:100%; }
+
+.usaDiv-lft h3 {
+    margin: 12px 0;
+	height:auto;
+}
+
+.pagainationDiv {
+    padding: 0px 0 0 0;
+}
+.footer-top {
+    padding:40px 0;
+}
+
+.upper-footer-lft ul li:last-child { display:none; }
+
+
+.bottom-footer-text ul { display:block; }
+
+.bottom-footer-text ul li {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.bottom-footer-text ul li a { margin:0 7px; }
+.navbar-toggle .icon-bar {
+    width: 25px;
+    height: 2px;
+    background: #ffffff;
+}
+.upper-footer-mid ul li a {
+    margin-right: 0;
+}
+
+.navbar-wrapper {
+    padding: 6px 0;
+}
+.nosDiv {
+    padding: 40px 0;
+}
+.nosDiv .full {
+    margin-bottom: 25px;
+}
+.notreDiv {
+    padding: 40px 0;
+}
+.notreDiv-part {
+    margin-bottom: 15px;
+}
+
+.pogrammeDiv-lft img { width:100%;}
+.pogrammeDiv-lft {
+    width: 100%;
+}
+.butsDiv h2 {
+    margin-bottom: 30px;
+}
+.exemples {
+    padding: 50px 0;
+}
+.exemples ol li {
+    margin: 8px 0;
+}
+.exemples h3 {
+    margin-bottom: 20px;
+}
+
+}
+
+
+
+@media screen and (max-width:767px) { 
+
+.navbar-toggle {
+    padding: 11px 11px 11px 11px;
+    position: absolute;
+    right: 0;
+    top: 62px;
+	background: #004673;
+}
+.banner-box {
+    margin-top: 25px;
+}
+.top-header-lft span img {
+    margin-right: 0;
+}
+
+.flexnav li a { font-size:14px !important;}
+.flexnav li ul li a { font-size:12px !important;}
+
+.top-header { text-align: center; }
+.top-header-lft { margin-bottom:12px; }
+
+.top-header-lft span {
+    float: right;
+}
+
+.top-header-lft span:last-child {
+    float: left;
+	text-align:left;
+	    font-size: 17px;
+}
+
+.top-header-lft span img {
+    height: 26px;
+}
+
+.Fairebtn {
+    padding: 10px 15px 14px 15px;
+    margin: 6px 0;
+    font-size: 17px;
+    margin-right: 10px;
+	float:left;
+}
+
+
+
+.top-header-rht  { display:none; }
+.top-header-mid {
+    text-align:left;
+}
+
+
+.estDiv h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.estDiv {
+    padding: 40px 0;
+}
+.banner {
+    padding: 40px 0;
+}
+.top-header-rht {
+    text-align: center;
+}
+.estbtn {
+    margin: 0 0 0 0;
+}
+.auxDiv .collapsible {
+    font-size: 18px;
+	padding: 15px;
+}
+.auxDiv {
+    padding: 40px 0;
+}
+.faisons {
+    padding: 40px 0;
+}
+.graphics {
+    padding: 40px 0;
+}
+.graphics h2 {
+    margin-top: 0;
+}
+.PressMedia {
+    padding: 40px 0;
+}
+
+.PhysicianList h2 {
+    margin: 0 0 20px 0;
+}
+.upper-footer-mid ul li {
+    width: 100%;
+    margin: 2px 0;
+}
+
+.upper-footer-lft {
+    margin-bottom: 20px;
+}
+.upper-footer-rht ul li {
+    margin: 2px 0;
+}
+.upper-footer-lft p {
+    margin-top: 12px;
+}
+
+.navbar-wrapper {
+    padding: 3px 0;
+    border: none;
+}
+
+.flexnav li a {
+    padding: 10px 15px !important;
+}
+
+.mblpart .nav-pills>li {
+    width: auto;
+}
+
+.upper-footer-mid h2 { margin-top:0; }
+.upper-footer-rht h2 { margin-top:0; }
+.mapDiv-lft ul li {
+    float: left;
+    width: 50%;
+}
+
+.guide-whitebox {
+    padding: 15px 0 0 0;
+}
+
+.QuellesDiv .nav>li>a {
+    border-right: none;
+}
+
+.QuellesDiv {
+    padding: 40px 0;
+}
+
+.bottom-footer-text p {
+    padding: 0 0px;
+}
+
+.blogDiv-rht {
+    height: auto;
+	padding-left:0;
+}
+.blogDiv-rht span {
+    position: relative;
+    left: 0;
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+}
+.blogDiv-rht h3 {
+    margin-top: 5px;
+}
+.lieuxDiv {
+    padding: 40px 0;
+}
+.lieuxDiv-part .cao {
+    padding: 20px 15px;
+}
+
+.blogDiv-lft .caption {
+    padding: 15px;
+}
+.blogDiv-lft .caption h2 {
+    font-size: 20px;
+	    margin-top: 32%;
+}
+.blogDiv-lft .caption p {
+    font-size: 15px;
+    line-height: normal;
+}
+.top-header-rht span {
+    float: left;
+    display: none;
+}
+
+.pogrammeDiv-lft img { width:100%;}
+.pogrammeDiv-lft {
+    width: 100%;
+}
+
+.butsDiv h2 {
+    margin-bottom: 20px;
+}
+.exemples h2 {
+    font-size: 24px;
+}
+.box-gray {
+    padding: 50px 0 20px 0;
+}
+.butsDiv {
+    padding: 50px 0;
+}
+.pogrammeDiv {
+    padding: 40px 0;
+}
+.pogrammeDiv h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.covid-box h2 {
+    margin-bottom: 25px;
+}
+.laDiv {
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+.pogeDiv {
+    padding: 40px 0;
+}
+.busDiv {
+    padding: 40px 0;
+}
+
+.banner {
+    text-align: left;
+}
+.estDiv ul li {
+    font-size: 16px;
+	line-height: normal;
+}
+.estDiv-lft {
+    margin-bottom: 30px;
+}
+
+
+
+}
+
+@media screen and (max-width:736px) { 
+
+}
+
+@media screen and (max-width: 667px) { 
+
+}
+
+@media screen and (max-width: 414px) {
+	
+.mapDiv-lft ul li {
+    width: 100%;
+}
+.mblpart .nav-pills>li {
+    width: 100%;
+	margin-bottom: 0;
+}
+.guide-whitebox-rht h3 {
+    font-size: 19px;
+}
+.QuellesDiv h2 {
+    margin-bottom: 35px;
+    font-size: 22px;
+}
+.guide-whitebox-rht ul li {
+    background: url(../images/tick2.png) no-repeat left top 4px;
+}
+.mapDiv-lft h2 {
+    margin-top: 30px;
+    font-size: 22px;
+}
+.servicesDiv h2 {
+    font-size: 22px;
+}
+.bottom-footer-text {
+    padding-top: 25px;
+    margin-top: 25px;
+}
+
+.nosDiv h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.servicesDiv-part h3 { font-size: 26px }
+.butsDiv {
+    padding: 40px 0;
+}
+.exemples {
+    padding: 40px 0;
+}
+.butsDiv h2 {
+    font-size: 24px;
+}
+.exemples ol li {
+    padding-left: 10px;
+}
+.exemples ul li {
+    padding-left: 30px;
+    margin: 8px 0;
+    padding-right: 0;
+    height: auto;
+    line-height: normal;
+}
+.butsDiv ul li {
+    margin: 10px 0;
+    padding-right: 0;
+    height: auto;
+    line-height: normal;
+}
+.box-gray-part {
+    padding: 15px;
+}
+.box-full {
+    margin-bottom: 0px;
+}
+.pogrammeDiv {
+    padding: 30px 0 40px 0;
+}
+.guide-whitebox-rht {
+    padding-right: 25px;
+}
+.body-part-lft .ques {
+   padding: 20px;
+   font-weight: 600;
+}
+
+.body-part-lft .ques {
+    padding: 15px;
+    margin-bottom:10px;
+}
+
+.body-part-lft .ques {
+    margin-bottom: 0;
+}
+ 
+.auxDiv .collapsible span {
+    width: 91%;
+}
+.auxDiv {
+    padding: 30px 0 10px 0;
+}
+.blogDiv h1 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+.lieuxDiv h2 {
+    margin-bottom: 25px;
+}
+.lieuxDiv-part .cao h3 {
+    font-size: 24px;
+    line-height: 26px;
+}
+
+.banner-lft h1 {
+    font-size: 22px;
+	margin-bottom:12px;
+}
+.banner-rht { width:100%; float:left; }
+.banner-lft h2 { font-size:16px; margin-bottom: 5px; margin-top: 10px; }
+.banner-lft .unebtn {
+    margin: 3px 0 9px 0;
+}
+.banner-lft p {
+    font-size: 15px;
+    line-height: 18px;
+}
+.banner {
+    padding: 20px 0 40px 0;
+}
+.banner-lft .unebtn {
+    padding: 11px 56px 11px 20px;
+	background-position: 92% 13px;
+	    font-size: 15px;
+}
+
+.banner-box {
+    line-height: normal;
+    font-size: 15px;
+    padding: 15px;
+}
+.auxDiv .collapsible {
+    font-size: 17px;
+    padding: 13px;
+}
+
+.faisons .faisons-lft p {
+    font-size: 15px;
+    line-height: normal;
+}
+
+.newsCarousel .item .textDiv h3 {
+    font: 600 21px/21px 'Source Sans Pro', sans-serif;
+}
+.PressMedia a {
+    line-height: normal;
+}
+
+}
+
+
+@media screen and (max-width: 375px) {
+
+.blogDiv-lft .caption h2 {
+    margin-top: 29%;
+    font-size: 18px;
+}
+.blogDiv-lft .caption p {
+    font-size: 14px;
+}
+
+
+}
+
+@media screen and (max-width: 360px) {
+	.blogDiv-lft .caption h2 {
+    margin-top: 22%;
+    font-size: 18px;
+}
+.blogDiv-lft .caption h2 {
+    margin-top: 29%;
+    font-size: 17px;
+}
+
+
+}
+
+@media screen and (max-width: 320px) {
+.banner-lft h1 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+.blogDiv-lft .caption h2 {
+    margin-top: 20%;
+    font-size: 15px;
+}
+.date-part {
+    padding: 7px 15px;
+}
+.blogDiv h1 {
+    font-size: 26px;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

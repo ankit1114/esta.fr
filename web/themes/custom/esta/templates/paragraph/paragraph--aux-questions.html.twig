@@ -1,0 +1,22 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  {% block content %}
+    {% if content.field_heading['#items'].value|trim is not empty %}
+      <div class="auxDiv">
+        <div class="container">
+          <h2> {{ content.field_heading }} </h2>
+          {% if AuxQuestion is not empty %}
+            {{ AuxQuestion }}
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  {% endblock %}
+{% endblock paragraph %}

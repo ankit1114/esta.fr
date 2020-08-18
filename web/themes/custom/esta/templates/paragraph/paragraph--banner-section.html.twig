@@ -1,0 +1,27 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  {% block content %}
+    {% if content.field_banner_description['#items'].value|trim is not empty %}
+      <div class="banner">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              {{ content.field_banner_description }}
+            </div>
+            <div class="col-md-5">
+              <div class="banner-rht"> {{ content.field_banner_image }} </div>
+            </div>
+          </div>
+          {{ content.field_covid_note }}
+        </div>
+      </div>
+      {% endif %}
+  {% endblock %}
+{% endblock paragraph %}

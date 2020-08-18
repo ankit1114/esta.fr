@@ -1,0 +1,14 @@
+{% if links|length > 0 %}
+  <ul>
+    {% for link in links %}
+      {% if link.subMenu|length > 0 %}
+        <li>
+      {% else %}
+        <li>
+      {% endif %}
+        {{ link.link }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
+

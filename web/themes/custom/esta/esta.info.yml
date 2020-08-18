@@ -1,0 +1,15 @@
+name: ESTA
+type: theme
+description: 'Custom Theme for My Website.'
+core: 8.x
+
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer_top: 'Footer Top'
+  upper_footer_mid : 'Upper Footer Mid'
+  upper_footer_rht : 'Upper Footer Rht'
+  footer_bottom: 'Footer Bottom'
+
+libraries:
+  - esta/global-styling
